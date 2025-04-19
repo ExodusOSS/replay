@@ -168,7 +168,8 @@ export function fetchReplayer(log) {
       headers: getHeaders(),
       clone: () => fallbackResponse(),
       get body() {
-        if (typeof ReadableStream === 'undefined') {
+        // Try to use a native ReadableStream
+        if (typeof ReadableStream !== 'undefined') {
           return ReadableStream.from(new Uint8Array(getAB()))
         }
 
