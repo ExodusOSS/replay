@@ -168,8 +168,19 @@ export function fetchReplayer(log) {
       headers: getHeaders(),
       clone: () => fallbackResponse(),
       get body() {
-        if (typeof ReadableStream !== 'undefined') return { locked: false } // just trigger browser detection to make certain clients use .json() instead
-        return ReadableStream.from(new Uint8Array(getAB()))
+        if (typeof ReadableStream === 'undefined') {
+          return ReadableStream.from(new Uint8Array(getAB()))
+        }
+
+        // Some clients do this: if ('locked' in stream) return response.json()
+        // Or: if (typeof stream.getReader === 'function') return response.json()/.text()
+        // Else they attempt to concat chunks from stream
+        // So we trigger browser detection to make those clients use .json()/.text() instead
+        const getReader = () => {
+          throw new Error('getReader() not supported')
+        }
+
+        return { locked: false, getReader }
       },
     })
     return fallbackResponse()
