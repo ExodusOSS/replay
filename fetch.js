@@ -135,13 +135,24 @@ export function fetchRecorder(log, { fetch: _fetch = globalThis.fetch?.bind?.(gl
 export function fetchReplayer(log) {
   if (!Array.isArray(log)) throw new Error('log should be passed')
   log = log.map((entry) => ({ _request: keySortedJSON(entry.request), ...entry })) // cloned as we mutate it
-  return async function fetch(resource, options = {}) {
+  return fetchApi(async (resource, options) => {
     const request = keySortedJSON(await serializeRequest(resource, options))
     const id = log.findIndex((entry) => entry._request === request)
     if (id < 0) throw new Error(`Request to ${resource} not found, ${log.length} more entries left`)
     const [entry] = log.splice(id, 1)
-    const { status, statusText, ok, url, redirected, type, headers = [], body, bodyType } = entry
+    return entry
+  })
+}
 
+export const fetchApi = (lookup, fallback) =>
+  async function fetch(resource, options = {}) {
+    const entry = await lookup(resource, options)
+    if (!entry) {
+      if (!fallback) throw new Error(`Request to ${resource} not found`)
+      return fallback(resource, options)
+    }
+
+    const { status, statusText, ok, url, redirected, type, headers = [], body, bodyType } = entry
     if (entry.error) {
       const { message, ...rest } = entry.error
       throw new TypeError(message, rest)
@@ -186,4 +197,3 @@ export function fetchReplayer(log) {
     })
     return fallbackResponse()
   }
-}
