@@ -22,6 +22,7 @@
   "type": "module",
   "main": "./index.js",
   "exports": {
+    ".": "./index.js",
     "./fetch": "./fetch.js",
     "./websocket": "./websocket.js"
   },
