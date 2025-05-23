@@ -62,9 +62,9 @@ async function serializeResponseBody(response) {
   return { bodyType: 'binary', body: await serializeBody(buffer) }
 }
 
-function deserializeResponseBody(body, bodyType) {
+function deserializeResponseBody(body, bodyType, toJSON = (arg) => JSON.stringify(arg)) {
   if (bodyType === 'text') return body
-  if (bodyType === 'json') return prettyJSON(body) // need to re-encode it as clone() exists
+  if (bodyType === 'json') return toJSON(body) // need to re-encode it as clone() exists
   if (bodyType === 'binary' && body?.type === 'ArrayBuffer') return deserializeBody(body)
   throw new Error('Unexpected bodyType in fetch recording log')
 }
@@ -164,18 +164,23 @@ export const fetchApi = (lookup, fallback) =>
       if (typeof Response !== 'undefined') return makeResponse({ body, bodyType }, headers, props)
     } catch {} // passthrough and return a plain object
 
-    const data = deserializeResponseBody(body, bodyType)
-    const getText = () => (typeof data === 'string' ? data : Buffer.from(data).toString('utf8'))
     const bufferToAB = (buf) => buf.buffer.slice(0, buf.byteOffset, buf.byteOffset + buf.byteLength)
-    const getAB = () => (typeof data === 'string' ? bufferToAB(Buffer.from(data)) : data.slice(0)) // eslint-disable-line unicorn/prefer-spread
     const getHeaders = () => (typeof Headers === 'undefined' ? [...headers] : new Headers(headers))
     const cType = () => getHeaders().get?.('content-type') ?? new Map(headers).get('content-type')
+
+    const c = [undefined, undefined] // 0 is non pretty-printed, 1 is pretty-printed in case of json
+    const raw = () => c[0] ?? c[1] ?? (c[0] = deserializeResponseBody(body, bodyType))
+    const pretty = () => c[1] ?? (c[1] = deserializeResponseBody(body, bodyType, prettyJSON))
+    const data = bodyType === 'json' ? pretty : raw
+    const getText = (arg) => (bodyType === 'binary' ? Buffer.from(arg).toString('utf8') : arg)
+    const getAB = () => (bodyType === 'binary' ? data().slice(0) : bufferToAB(Buffer.from(data()))) // eslint-disable-line unicorn/prefer-spread
+
     const fallbackResponse = () => ({
       ...props,
-      text: async () => getText(),
-      json: async () => JSON.parse(getText()),
+      text: async () => getText(data()),
+      json: async () => JSON.parse(getText(raw())),
       arrayBuffer: async () => getAB(),
-      blob: async () => new Blob([data], { type: cType() }),
+      blob: async () => new Blob([data()], { type: cType() }),
       headers: getHeaders(),
       clone: () => fallbackResponse(),
       get body() {
