@@ -175,7 +175,7 @@ export const fetchApi = (lookup, fallback) =>
       text: async () => getText(),
       json: async () => JSON.parse(getText()),
       arrayBuffer: async () => getAB(),
-      blob: () => new Blob([data], { type: cType() }),
+      blob: async () => new Blob([data], { type: cType() }),
       headers: getHeaders(),
       clone: () => fallbackResponse(),
       get body() {
