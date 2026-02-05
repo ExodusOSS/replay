@@ -68,7 +68,7 @@ class EventQueue {
 }
 
 const EventTargetClass =
-  globalThis.EventTarget ||
+  (globalThis.Cloudflare ? null : globalThis.EventTarget) || // workerd EventTarget is broken: https://github.com/cloudflare/workerd/issues/6022
   class EventTarget {
     #listeners = new Map()
 
