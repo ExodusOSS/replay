@@ -1,14 +1,5 @@
 // Type definitions for fetch.js
 
-// Re-export standard Fetch API types
-export type Response = globalThis.Response
-export type Request = globalThis.Request
-export type Headers = globalThis.Headers
-export type RequestInfo = globalThis.RequestInfo
-export type RequestInit = globalThis.RequestInit
-export type Blob = globalThis.Blob
-export type ReadableStream<R = any> = globalThis.ReadableStream<R>
-
 /**
  * Options for fetchRecorder
  */

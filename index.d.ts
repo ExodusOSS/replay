@@ -1,24 +1,9 @@
 // Re-export types and functions from individual modules
-export type {
-  Response,
-  Request,
-  Headers,
-  RequestInfo,
-  RequestInit,
-  Blob,
-  ReadableStream,
-  FetchRecorderOptions,
-} from './fetch.js'
+export type { FetchRecorderOptions } from './fetch.js'
 
 export { fetchRecorder, fetchReplayer, fetchApi } from './fetch.js'
 
 export type {
-  WebSocket,
-  MessageEvent,
-  Event,
-  EventTarget,
-  CloseEvent,
-  ErrorEvent,
   WebSocketRecorderOptions,
   WebSocketReplayerOptions,
 } from './websocket.js'

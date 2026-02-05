@@ -1,13 +1,5 @@
 // Type definitions for websocket.js
 
-// Re-export standard WebSocket and Event types
-export type WebSocket = globalThis.WebSocket
-export type MessageEvent<T = any> = globalThis.MessageEvent<T>
-export type Event = globalThis.Event
-export type EventTarget = globalThis.EventTarget
-export type CloseEvent = globalThis.CloseEvent
-export type ErrorEvent = globalThis.ErrorEvent
-
 /**
  * Options for WebSocketRecorder
  */
