@@ -5,25 +5,24 @@
     "statusText": "OK",
     "ok": true,
     "headers": [
-      ["accept-ranges", "bytes"],
-      ["age", "476141"],
-      ["cache-control", "max-age=604800"],
+      ["age", "5169"],
+      ["allow", "GET, HEAD"],
+      ["cf-cache-status", "HIT"],
+      ["cf-ray", "9c93de274f60ef91-WAW"],
+      ["connection", "keep-alive"],
       ["content-encoding", "gzip"],
-      ["content-length", "648"],
-      ["content-type", "text/html; charset=UTF-8"],
-      ["date", "Wed, 07 Aug 2024 06:57:41 GMT"],
-      ["etag", "\"3147526947+gzip\""],
-      ["expires", "Wed, 14 Aug 2024 06:57:41 GMT"],
-      ["last-modified", "Thu, 17 Oct 2019 07:18:26 GMT"],
-      ["server", "ECAcc (bsb/27A8)"],
-      ["vary", "Accept-Encoding"],
-      ["x-cache", "HIT"]
+      ["content-type", "text/html"],
+      ["date", "Thu, 05 Feb 2026 16:43:37 GMT"],
+      ["last-modified", "Wed, 04 Feb 2026 05:21:17 GMT"],
+      ["server", "cloudflare"],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"]
     ],
     "url": "https://example.com/",
     "redirected": false,
     "type": "basic",
     "bodyType": "text",
-    "body": "<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n"
+    "body": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href=\"https://iana.org/domains/example\">Learn more</a></div></body></html>\n"
   }, {
     "request": { "resource": "https://jsonplaceholder.typicode.com/posts", "options": {} },
     "status": 200,
@@ -31,39 +30,39 @@
     "ok": true,
     "headers": [
       ["access-control-allow-credentials", "true"],
-      ["age", "12572"],
+      ["age", "17533"],
       ["alt-svc", "h3=\":443\"; ma=86400"],
       ["cache-control", "max-age=43200"],
       ["cf-cache-status", "HIT"],
-      ["cf-ray", "8af55fbb691775bb-DME"],
+      ["cf-ray", "9c93de290f9ae5d6-WAW"],
       ["connection", "keep-alive"],
       ["content-encoding", "gzip"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Wed, 07 Aug 2024 06:57:41 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:37 GMT"],
       ["etag", "W/\"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM\""],
       ["expires", "-1"],
       [
         "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+        "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
       ],
       ["pragma", "no-cache"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723001289&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2FgqbYO9t0Tu79V0Skb76IuN1csjngS%2BJrUlvzp2%2B1Rk%3D\"}]}"
+        "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=vMVypWUzUeOukktnVdYPzNhoaOrwHgSKERxxl%2FUP3RQ%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1769916055\"}],\"max_age\":3600}"
       ],
       [
         "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723001289&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2FgqbYO9t0Tu79V0Skb76IuN1csjngS%2BJrUlvzp2%2B1Rk%3D"
+        "heroku-nel=\"https://nel.heroku.com/reports?s=vMVypWUzUeOukktnVdYPzNhoaOrwHgSKERxxl%2FUP3RQ%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1769916055\""
       ],
       ["server", "cloudflare"],
       ["transfer-encoding", "chunked"],
       ["vary", "Origin, Accept-Encoding"],
-      ["via", "1.1 vegur"],
+      ["via", "2.0 heroku-router"],
       ["x-content-type-options", "nosniff"],
       ["x-powered-by", "Express"],
       ["x-ratelimit-limit", "1000"],
       ["x-ratelimit-remaining", "999"],
-      ["x-ratelimit-reset", "1723001323"]
+      ["x-ratelimit-reset", "1769916098"]
     ],
     "url": "https://jsonplaceholder.typicode.com/posts",
     "redirected": false,
@@ -581,40 +580,41 @@
     "statusText": "OK",
     "ok": true,
     "headers": [
+      ["accept-ranges", "bytes"],
       ["access-control-allow-credentials", "true"],
-      ["age", "26003"],
+      ["age", "5357"],
       ["alt-svc", "h3=\":443\"; ma=86400"],
       ["cache-control", "max-age=43200"],
       ["cf-cache-status", "HIT"],
-      ["cf-ray", "8af55fbbb98775bb-DME"],
+      ["cf-ray", "9c93de29a90fe5d6-WAW"],
       ["connection", "keep-alive"],
       ["content-encoding", "gzip"],
+      ["content-length", "1847"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Wed, 07 Aug 2024 06:57:41 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:37 GMT"],
       ["etag", "W/\"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ\""],
       ["expires", "-1"],
       [
         "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+        "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
       ],
       ["pragma", "no-cache"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1722930143&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2F%2BZAdcoi1FQXrtO3wcGhYX3NFhbH04D3tXogcoiqEYo%3D\"}]}"
+        "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=7ddQwA2p13%2FRVJDsXEEmm5Wp8AORgYDYsrP2RnqOIh4%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1767009976\"}],\"max_age\":3600}"
       ],
       [
         "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1722930143&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=%2F%2BZAdcoi1FQXrtO3wcGhYX3NFhbH04D3tXogcoiqEYo%3D"
+        "heroku-nel=\"https://nel.heroku.com/reports?s=7ddQwA2p13%2FRVJDsXEEmm5Wp8AORgYDYsrP2RnqOIh4%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1767009976\""
       ],
       ["server", "cloudflare"],
-      ["transfer-encoding", "chunked"],
       ["vary", "Origin, Accept-Encoding"],
-      ["via", "1.1 vegur"],
+      ["via", "2.0 heroku-router"],
       ["x-content-type-options", "nosniff"],
       ["x-powered-by", "Express"],
       ["x-ratelimit-limit", "1000"],
-      ["x-ratelimit-remaining", "999"],
-      ["x-ratelimit-reset", "1722930201"]
+      ["x-ratelimit-remaining", "998"],
+      ["x-ratelimit-reset", "1767009977"]
     ],
     "url": "https://jsonplaceholder.typicode.com/users",
     "redirected": false,
@@ -823,39 +823,39 @@
     "ok": true,
     "headers": [
       ["access-control-allow-credentials", "true"],
-      ["age", "4469"],
+      ["age", "8166"],
       ["alt-svc", "h3=\":443\"; ma=86400"],
       ["cache-control", "max-age=43200"],
       ["cf-cache-status", "HIT"],
-      ["cf-ray", "8af55fbbf9e475bb-DME"],
+      ["cf-ray", "9c93de2a3a9ce5d6-WAW"],
       ["connection", "keep-alive"],
       ["content-encoding", "br"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Wed, 07 Aug 2024 06:57:41 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:37 GMT"],
       ["etag", "W/\"1fd-XTG63SYhaP/Uo6/vgmARnL3rpBk\""],
       ["expires", "-1"],
       [
         "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+        "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
       ],
       ["pragma", "no-cache"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723009392&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=93Xr8fYi4aKDxcuPCBsqqTohvFV%2FCplF%2B2cix8KTsgY%3D\"}]}"
+        "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=Zoh7HPrWMmLBKNecRobZuV0GPQUjFvBh6RgEHF6YhXQ%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770301651\"}],\"max_age\":3600}"
       ],
       [
         "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723009392&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=93Xr8fYi4aKDxcuPCBsqqTohvFV%2FCplF%2B2cix8KTsgY%3D"
+        "heroku-nel=\"https://nel.heroku.com/reports?s=Zoh7HPrWMmLBKNecRobZuV0GPQUjFvBh6RgEHF6YhXQ%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1770301651\""
       ],
       ["server", "cloudflare"],
       ["transfer-encoding", "chunked"],
       ["vary", "Origin, Accept-Encoding"],
-      ["via", "1.1 vegur"],
+      ["via", "2.0 heroku-router"],
       ["x-content-type-options", "nosniff"],
       ["x-powered-by", "Express"],
       ["x-ratelimit-limit", "1000"],
-      ["x-ratelimit-remaining", "999"],
-      ["x-ratelimit-reset", "1723009423"]
+      ["x-ratelimit-remaining", "961"],
+      ["x-ratelimit-reset", "1770301685"]
     ],
     "url": "https://jsonplaceholder.typicode.com/users/2",
     "redirected": false,
@@ -887,24 +887,22 @@
     "statusText": "Not Found",
     "ok": false,
     "headers": [
-      ["accept-ranges", "bytes"],
-      ["age", "418273"],
-      ["cache-control", "max-age=604800"],
+      ["age", "195"],
+      ["cf-cache-status", "HIT"],
+      ["cf-ray", "9c93de2adfe6ef91-WAW"],
+      ["connection", "keep-alive"],
       ["content-encoding", "gzip"],
-      ["content-length", "648"],
-      ["content-type", "text/html; charset=UTF-8"],
-      ["date", "Wed, 07 Aug 2024 06:57:41 GMT"],
-      ["expires", "Wed, 14 Aug 2024 06:57:41 GMT"],
-      ["last-modified", "Fri, 02 Aug 2024 10:46:28 GMT"],
-      ["server", "ECAcc (bsb/27B4)"],
-      ["vary", "Accept-Encoding"],
-      ["x-cache", "404-HIT"]
+      ["content-type", "text/html"],
+      ["date", "Thu, 05 Feb 2026 16:43:38 GMT"],
+      ["server", "cloudflare"],
+      ["transfer-encoding", "chunked"],
+      ["vary", "Accept-Encoding"]
     ],
     "url": "https://example.com/404",
     "redirected": false,
     "type": "basic",
     "bodyType": "text",
-    "body": "<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n"
+    "body": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href=\"https://iana.org/domains/example\">Learn more</a></div></body></html>\n"
   }, {
     "request": {
       "resource": "https://jsonplaceholder.typicode.com/posts",
@@ -923,35 +921,35 @@
       ["alt-svc", "h3=\":443\"; ma=86400"],
       ["cache-control", "no-cache"],
       ["cf-cache-status", "DYNAMIC"],
-      ["cf-ray", "8af6ff5c7b195c4d-AMS"],
+      ["cf-ray", "9c93de2b7da3e5d6-WAW"],
       ["connection", "keep-alive"],
       ["content-length", "65"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Wed, 07 Aug 2024 11:41:26 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:38 GMT"],
       ["etag", "W/\"41-GDNaWfnVU6RZhpLbye0veBaqcHA\""],
       ["expires", "-1"],
       ["location", "https://jsonplaceholder.typicode.com/posts/101"],
       [
         "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+        "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
       ],
       ["pragma", "no-cache"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723030886&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=W9QpVyoZURQ%2BQbdR%2B%2Bw03AzngwyUkdABa%2Bmv4idArD0%3D\"}]}"
+        "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=USR%2BmBWr6O8L1MkHn0Hpz9aCDC0Jfx1hicuzWl8MHYA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770309818\"}],\"max_age\":3600}"
       ],
       [
         "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723030886&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=W9QpVyoZURQ%2BQbdR%2B%2Bw03AzngwyUkdABa%2Bmv4idArD0%3D"
+        "heroku-nel=\"https://nel.heroku.com/reports?s=USR%2BmBWr6O8L1MkHn0Hpz9aCDC0Jfx1hicuzWl8MHYA%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1770309818\""
       ],
       ["server", "cloudflare"],
       ["vary", "Origin, X-HTTP-Method-Override, Accept-Encoding"],
-      ["via", "1.1 vegur"],
+      ["via", "2.0 heroku-router"],
       ["x-content-type-options", "nosniff"],
       ["x-powered-by", "Express"],
       ["x-ratelimit-limit", "1000"],
-      ["x-ratelimit-remaining", "998"],
-      ["x-ratelimit-reset", "1723030903"]
+      ["x-ratelimit-remaining", "994"],
+      ["x-ratelimit-reset", "1770309845"]
     ],
     "url": "https://jsonplaceholder.typicode.com/posts",
     "redirected": false,
@@ -968,34 +966,28 @@
     "ok": true,
     "headers": [
       ["access-control-allow-origin", "*"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "9c93de2dfa9f6e97-WAW"],
       ["connection", "keep-alive"],
       ["content-length", "42"],
       ["content-type", "application/json; charset=utf-8"],
-      ["date", "Wed, 07 Aug 2024 12:39:23 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:38 GMT"],
       ["etag", "W/\"2a-r0Rs1eQ3gUS7BGsxV26IHePtM5A\""],
-      [
-        "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
-      ],
+      ["nel", "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723034363&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=4fk5kRBcaw9oS9KFC%2FAKKRtuQt1ikHRIvoJR9r5G7os%3D\"}]}"
+        "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2Bn8AnjmE3GNLpj7MgwigMHPi2aa8PCgFxC3ROM7BM3Rat5qapYfGsSk27OqaZwuHFin9Hx65dSBoD57uDw0j3KjgPFUcVHFZnWNJinI%3D\"}]}"
       ],
-      [
-        "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723034363&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=4fk5kRBcaw9oS9KFC%2FAKKRtuQt1ikHRIvoJR9r5G7os%3D"
-      ],
-      ["server", "Cowboy"],
+      ["server", "cloudflare"],
       ["strict-transport-security", "max-age=15552000; includeSubDomains"],
       ["vary", "Accept-Encoding"],
-      ["via", "1.1 vegur"],
       ["x-content-type-options", "nosniff"],
       ["x-dns-prefetch-control", "off"],
       ["x-download-options", "noopen"],
       ["x-frame-options", "SAMEORIGIN"],
       ["x-ratelimit-limit", "100"],
       ["x-ratelimit-remaining", "99"],
-      ["x-ratelimit-reset", "1723034367"],
+      ["x-ratelimit-reset", "1770309828"],
       ["x-xss-protection", "1; mode=block"]
     ],
     "url": "https://dummyjson.com/posts/add",
@@ -1011,33 +1003,27 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cache-control", "public, max-age=31536000"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "9c93de306a64d17b-WAW"],
       ["connection", "keep-alive"],
       ["content-length", "95"],
       ["content-type", "image/png"],
-      ["date", "Thu, 15 Aug 2024 08:21:33 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:39 GMT"],
       ["etag", "W/\"5f-WDJ9e5tKUBDo6hVy4EN2G0gSXyI\""],
-      [
-        "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
-      ],
+      ["nel", "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723710093&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=w3U8CfLgKzmmBzuA9EQUfi468469vstX9IGmNXj9QH8%3D\"}]}"
+        "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IMzgujZJNjnOkyU9IuW0zGBLK0AiqGf7EGiOoeCFwyLm6UW%2BVy8lfLoJu%2BlX4KJmPZeBslt4Jhtg1xYp3gL5rxgEoJpqwaKwh36evmE%3D\"}]}"
       ],
-      [
-        "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723710093&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=w3U8CfLgKzmmBzuA9EQUfi468469vstX9IGmNXj9QH8%3D"
-      ],
-      ["server", "Cowboy"],
+      ["server", "cloudflare"],
       ["strict-transport-security", "max-age=15552000; includeSubDomains"],
-      ["via", "1.1 vegur"],
       ["x-content-type-options", "nosniff"],
       ["x-dns-prefetch-control", "off"],
       ["x-download-options", "noopen"],
       ["x-frame-options", "SAMEORIGIN"],
       ["x-ratelimit-limit", "100"],
       ["x-ratelimit-remaining", "98"],
-      ["x-ratelimit-reset", "1723710101"],
+      ["x-ratelimit-reset", "1770309823"],
       ["x-xss-protection", "1; mode=block"]
     ],
     "url": "https://dummyjson.com/image/2",
@@ -1056,33 +1042,27 @@
     "headers": [
       ["access-control-allow-origin", "*"],
       ["cache-control", "public, max-age=31536000"],
+      ["cf-cache-status", "DYNAMIC"],
+      ["cf-ray", "9c93de31ba366e97-WAW"],
       ["connection", "keep-alive"],
       ["content-length", "91"],
       ["content-type", "image/png"],
-      ["date", "Thu, 15 Aug 2024 08:21:33 GMT"],
+      ["date", "Thu, 05 Feb 2026 16:43:39 GMT"],
       ["etag", "W/\"5b-zrN5zg/2W78BCq8VIjeazWNTw7M\""],
-      [
-        "nel",
-        "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
-      ],
+      ["nel", "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"],
       [
         "report-to",
-        "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1723710093&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=w3U8CfLgKzmmBzuA9EQUfi468469vstX9IGmNXj9QH8%3D\"}]}"
+        "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=F6W%2BBUMPzVzZ8xjqHNo62bXl8d%2BJ6%2BalYKVgx042yaE590GjLBT8gM%2BdKAtjWawczBPGh%2FHhLZy9oJGej%2Fg8z5iFUhSI6OLipseLPGk%3D\"}]}"
       ],
-      [
-        "reporting-endpoints",
-        "heroku-nel=https://nel.heroku.com/reports?ts=1723710093&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=w3U8CfLgKzmmBzuA9EQUfi468469vstX9IGmNXj9QH8%3D"
-      ],
-      ["server", "Cowboy"],
+      ["server", "cloudflare"],
       ["strict-transport-security", "max-age=15552000; includeSubDomains"],
-      ["via", "1.1 vegur"],
       ["x-content-type-options", "nosniff"],
       ["x-dns-prefetch-control", "off"],
       ["x-download-options", "noopen"],
       ["x-frame-options", "SAMEORIGIN"],
       ["x-ratelimit-limit", "100"],
-      ["x-ratelimit-remaining", "96"],
-      ["x-ratelimit-reset", "1723710101"],
+      ["x-ratelimit-remaining", "97"],
+      ["x-ratelimit-reset", "1770309823"],
       ["x-xss-protection", "1; mode=block"]
     ],
     "url": "https://dummyjson.com/image/1",

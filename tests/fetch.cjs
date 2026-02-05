@@ -18,7 +18,7 @@ test('https://example.com', async () => {
     await assert.rejects(res.clone().json(), (err) => JSON_ERROR_REGEX.test(err.message))
   }
 
-  assert.match(await res.text(), /This domain is for use in illustrative examples in documents/)
+  assert.match(await res.text(), /This domain is for use in/)
 })
 
 test('https://jsonplaceholder.typicode.com/posts', async () => {
@@ -70,7 +70,7 @@ test('https://example.com/404', async () => {
     await assert.rejects(res.clone().json(), (err) => JSON_ERROR_REGEX.test(err.message))
   }
 
-  assert.match(await res.text(), /This domain is for use in illustrative examples in documents/) // same text
+  assert.match(await res.text(), /This domain is for use in/) // same text
 })
 
 test('POST https://jsonplaceholder.typicode.com/posts with JSON', async () => {
