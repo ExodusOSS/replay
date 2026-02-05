@@ -42,7 +42,7 @@ export type Blob = globalThis.Blob
  * Re-export of the standard ReadableStream type
  * @see https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream
  */
-export type ReadableStream = globalThis.ReadableStream
+export type ReadableStream<R = any> = globalThis.ReadableStream<R>
 
 // ============================================================================
 // WebSocket and Event Types (re-exported from DOM/Web standards)
@@ -58,7 +58,7 @@ export type WebSocket = globalThis.WebSocket
  * Re-export of the standard MessageEvent type
  * @see https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent
  */
-export type MessageEvent = globalThis.MessageEvent
+export type MessageEvent<T = any> = globalThis.MessageEvent<T>
 
 /**
  * Re-export of the standard Event type
