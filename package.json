@@ -21,6 +21,7 @@
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": "./index.js",
     "./fetch": "./fetch.js",
@@ -29,6 +30,7 @@
   "files": [
     "fetch.js",
     "index.js",
+    "index.d.ts",
     "util.js",
     "websocket.js",
     "CHANGELOG.md"
