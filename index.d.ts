@@ -25,12 +25,7 @@ export type {
 
 export { WebSocketRecorder, WebSocketReplayer } from './websocket.js'
 
-export type {
-  ArrayBuffer,
-  Uint8Array,
-  DataView,
-  PrettyJSONOptions,
-} from './util.js'
+export type { PrettyJSONOptions } from './util.js'
 
 export { prettyJSON } from './util.js'
 

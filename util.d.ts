@@ -1,10 +1,5 @@
 // Type definitions for util.js
 
-// Re-export standard binary data types
-export type ArrayBuffer = globalThis.ArrayBuffer
-export type Uint8Array = globalThis.Uint8Array
-export type DataView = globalThis.DataView
-
 /**
  * Options for prettyJSON formatting
  */
@@ -22,3 +17,4 @@ export interface PrettyJSONOptions {
  * @returns Pretty-printed JSON string
  */
 export function prettyJSON(data: any, options?: PrettyJSONOptions): string
+
