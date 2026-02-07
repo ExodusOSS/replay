@@ -1,5 +1,22 @@
 import { isPlainObject, prettyJSON, keySortedJSON, serializeBody, deserializeBody } from './util.js'
 
+let haveHeaders
+
+function makeHeaders(headers) {
+  // Lazy to allow polyfilling
+  if (haveHeaders === undefined) {
+    haveHeaders = false
+    if (typeof Headers === 'function') {
+      try {
+        // We don't want non-iterable headers, see e.g. https://github.com/boa-dev/boa/issues/4611
+        haveHeaders = [...new Headers([['a', 'b']])].length === 1
+      } catch {}
+    }
+  }
+
+  return haveHeaders ? new Headers(headers) : [...headers]
+}
+
 function serializeHeaders(headers) {
   if (!headers || Array.isArray(headers)) return headers
   if (isPlainObject(headers)) return Object.entries(headers)
@@ -165,7 +182,7 @@ export const fetchApi = (lookup, fallback) =>
     } catch {} // passthrough and return a plain object
 
     const bufferToAB = (buf) => buf.buffer.slice(0, buf.byteOffset, buf.byteOffset + buf.byteLength)
-    const getHeaders = () => (typeof Headers === 'undefined' ? [...headers] : new Headers(headers))
+    const getHeaders = () => makeHeaders(headers)
     const cType = () => getHeaders().get?.('content-type') ?? new Map(headers).get('content-type')
 
     const c = [undefined, undefined] // 0 is non pretty-printed, 1 is pretty-printed in case of json
