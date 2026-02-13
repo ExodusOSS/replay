@@ -21,16 +21,30 @@
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
-    ".": "./index.js",
-    "./fetch": "./fetch.js",
-    "./websocket": "./websocket.js"
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./fetch": {
+      "types": "./fetch.d.ts",
+      "default": "./fetch.js"
+    },
+    "./websocket": {
+      "types": "./websocket.d.ts",
+      "default": "./websocket.js"
+    }
   },
   "files": [
     "fetch.js",
+    "fetch.d.ts",
     "index.js",
+    "index.d.ts",
     "util.js",
+    "util.d.ts",
     "websocket.js",
+    "websocket.d.ts",
     "CHANGELOG.md"
   ],
   "scripts": {
